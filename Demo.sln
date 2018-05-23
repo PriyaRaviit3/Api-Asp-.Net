@@ -1,4 +1,19 @@
 ﻿
+ after creating your project:
+ step 1:
+ 	goto command prompt.
+step 2:
+	before creating api code install vue js and node js
+	in microsoft visual studio install some package .emmet,file icon, atom-live-server,beauty
+step 3:
+	check you vue js is installed or not
+step 4:
+	npm run dev---- run your code
+	
+ 
+ 
+ 
+ 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
