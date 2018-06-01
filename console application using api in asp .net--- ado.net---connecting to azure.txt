@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=arcudb01.database.windows.net;Initial Catalog=arcudb;User ID=devops;Password=bl!tz@2018;");
+            SqlCommand cmd = new SqlCommand("uspGETINFO", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            int i;
+            Console.WriteLine("Enter the Value");
+            i = int.Parse(Console.ReadLine());
+            cmd.Parameters.AddWithValue("@partID",i);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Console.WriteLine();
+                for (int x = 0; x < dt.Columns.Count; x++)
+                {
+                    Console.Write(row[x].ToString() + "  ");
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}
