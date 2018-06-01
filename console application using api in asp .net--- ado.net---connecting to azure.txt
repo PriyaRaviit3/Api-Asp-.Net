@@ -34,3 +34,15 @@ namespace ConsoleApp1
         }
     }
 }
+
+
+
+
+output:
+
+
+
+Enter the Value
+4
+
+1211-08016  Compression Bandage, Thin H, Flat Fold, w/4 in x 7.5 in Abd Pad, Elastic Strap, H-Shaped Cleat  10
